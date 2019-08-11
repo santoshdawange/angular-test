@@ -1,0 +1,39 @@
+.bs-table {
+  table {
+    width: 100%;
+  }
+
+  td,
+  th {
+    padding: 20px;
+    text-align: center;
+  }
+
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #f1f1f1;
+
+      &:hover {
+        background: #f8f8f8;
+      }
+    }
+  }
+
+  thead {
+
+
+    tr {
+      background: #fafafa;
+      background: $clr-secondary;
+      border-bottom: 4px solid #0b9046;
+      color: $clr-white;
+      //   text-shadow: 0 0 7px rgba(7, 105, 51, 0.8);
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+<div class="bs-card">
+  <div class="page-title">
+    <h2>Submitted Transactions</h2>
+  </div>
+  <div class="mod-card" *ngFor="let item of transactionData; index as i">
+    <div class="mod-card-head">
+      <div class="card-title">
+        Reference No:
+      </div>
+      <div class="card-title-content">
+        {{item.reference}}
+      </div>
+    </div>
+    <div class="mod-card-content">
+      <div class="card-details">
+        <h2>Customer Name</h2>
+        <div class="card-detail-content">{{item.customer_name}}</div>
+      </div>
+      <div class="card-details">
+        <h2>Transfer Amount</h2>
+        <div class="card-detail-content">{{item['tansaction_details']['transfer_amount'] | currency : item['tansaction_details']['transfer_currency'] : 'symbol-narrow'}}</div>
+      </div>
+      <div class="card-details">
+        <h2>Transfer Currency</h2>
+        <div class="card-detail-content">{{item['tansaction_details']['transfer_currency']}}</div>
+      </div>
+    </div>
+  </div>
+  <ul class="nav-list">
+      <li class="nav-item">
+          <button class="bs-btn" id="back-btn" routerLink="/banktransfer">Back</button>
+      </li>
+  </ul>
+</div>
+
+<!-- <div class="bs-table">
+  <table>
+    <thead>
+      <tr>
+        <th> reference</th>
+        <th> customer name</th>
+        <th> transfer amount</th>
+        <th> transfer currency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tdetails of transactionData">
+        <td>{{tdetails.reference}}</td>
+        <td>{{tdetails.custName}}</td>
+        <td>{{tdetails.transferAmount}}</td>
+        <td>{{tdetails.currency}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->

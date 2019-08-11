@@ -1,0 +1,14 @@
+// bs-card
+
+.bs-card{
+    .page-title{
+        text-align: center;
+    }
+    .nav-list {
+        overflow: hidden;
+        .nav-item {
+            text-align: center;
+            margin: 15px 0;
+        }
+    }
+}

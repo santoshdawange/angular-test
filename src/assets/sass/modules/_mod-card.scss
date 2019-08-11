@@ -1,0 +1,38 @@
+// mod-card
+
+.mod-card{
+    background: #fafafa;
+    position: relative;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin: 0 auto 15px;
+    .mod-card-head{
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333;
+        font-size: 16px;
+        font-weight: bold;
+        .card-title{
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .card-title-content{
+            display: inline-block;
+        }
+    }
+    .mod-card-content{
+        padding: 15px 0px 0 0;
+        .card-details{
+            display: inline-block;
+            margin-right: 25px;
+            width: 30%;
+            font-size: 14px;
+            h2{
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

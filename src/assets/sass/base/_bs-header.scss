@@ -1,0 +1,17 @@
+// bs-header
+.bs-header {
+    z-index: 5;
+    padding: 15px;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 5px #333;
+    .nav-list {
+        overflow: hidden;
+        .nav-item {
+            float: right;
+        }
+    }
+}

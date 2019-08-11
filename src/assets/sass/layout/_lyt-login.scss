@@ -1,0 +1,42 @@
+.lyt-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $clr-white;
+
+  .form-container {
+    // box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    max-width: 500px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    .page-title{
+      h2{
+        text-align: center;
+      }
+    }
+    .error-container{
+      color: red;
+      font-size: 12px;
+      padding-bottom: 1.25em;
+    }
+  }
+
+  .login-wrap {
+    border-radius: 10px;
+    padding: 30px 60px;
+    // box-shadow: 0 0 0px 6px rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+
+
+
+@media screen and (max-width:$breakpoint-sm) {}
+
+@media screen and (max-width:$breakpoint-xs) {}

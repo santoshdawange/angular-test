@@ -1,0 +1,9 @@
+<!-- <h1 mat-dialog-title>Hi {{data.name}}</h1> -->
+<h1 mat-dialog-title>Logout</h1>
+<div mat-dialog-content>
+  <p>Are you sure you want to logout?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" id="logout_cancel">Cancel</button>
+  <button mat-button (click)="onOkClick()" id="logout_ok">Ok</button>
+</div>

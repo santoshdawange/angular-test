@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from './shared/services/global.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-test-mcb';
+  // public showHeaderFooter: boolean = true;
+  constructor(
+    public globalservice:GlobalService
+  ){}
 }

@@ -1,0 +1,132 @@
+<div class="bs-form">
+    <div class="page-title">
+        <h2>New Transaction</h2>
+    </div>
+    <form action="" [formGroup]="newTransactionForm" class="newTransactionForm" (ngSubmit)="onSubmit()" #formRef="ngForm">
+        <div class="formfield">
+            <mat-form-field class="example-full-width form-control">
+                <input matInput placeholder="Reference Number" formControlName="refNumber" name="refNumber" readonly disabled maxlength="15">
+            </mat-form-field>
+        </div>
+        <div formGroupName="customer_info">
+            <div class="formfield">
+                <mat-form-field class="example-full-width form-control">
+                    <input matInput placeholder="Customer Number" formControlName="customerNo" name="customerNo" maxlength="5" (keyup)="getCustInfo($event)">
+                    <mat-error *ngIf="customerNo.invalid && (customerNo.dirty || customerNo.touched)" class="alert alert-danger">
+                        <div *ngIf="customerNo.errors.required">
+                            Customer No is required.
+                        </div>
+                        <div *ngIf="customerNo.errors.minlength">
+                            Please enter valid 5 digit customer no.
+                        </div>
+                        <div *ngIf="customerNo.errors.pattern">
+                            Please enter valid customer no.
+                        </div>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="formfield">
+                <mat-form-field class="example-full-width form-control">
+                    <input matInput placeholder="Customer Name" formControlName="custName" name="custName">
+                    <mat-error *ngIf="custName.invalid && (custName.dirty || custName.touched)" class="alert alert-danger">
+                        <div *ngIf="custName.errors.required">
+                            Customer Name is required.
+                        </div>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="formfield">
+                <mat-form-field class="example-full-width form-control">
+                    <textarea matInput placeholder="Address" formControlName="custAdd" name="custAdd"></textarea>
+                    <mat-error *ngIf="custAdd.invalid && (custAdd.dirty || custAdd.touched)" class="alert alert-danger">
+                        <div *ngIf="custAdd.errors.required">
+                            Customer address is required.
+                        </div>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="formfield">
+                <mat-form-field class="example-full-width form-control">
+                    <input matInput placeholder="Phone Number" formControlName="custPhone" name="custPhone">
+                    <mat-error *ngIf="custPhone.invalid && (custPhone.dirty || custPhone.touched)" class="alert alert-danger">
+                        <div *ngIf="custPhone.errors.required">
+                            Customer phone is required.
+                        </div>
+                        <div *ngIf="custPhone.errors.pattern">
+                            Only numbers are allowed
+                        </div>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="formfield">
+            <mat-form-field class="example-full-width form-control">
+                <input matInput placeholder="Transfer Amount" formControlName="transferAmt" name="transferAmt">
+                <mat-error *ngIf="transferAmt.invalid && (transferAmt.dirty || transferAmt.touched)" class="alert alert-danger">
+                    <div *ngIf="transferAmt.errors.required">
+                        Transfer amount is required.
+                    </div>
+                    <div *ngIf="transferAmt.errors.pattern">
+                        Only numbers are allowed
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formfield">
+            <mat-form-field class="example-full-width form-control">
+                <mat-select placeholder="Transfer Currency" formControlName="currency" name="currency">
+                    <mat-option value="AED">AED</mat-option>
+                    <mat-option value="EUR">EUR</mat-option>
+                    <mat-option value="CHF">CHF</mat-option>
+                    <mat-option value="MUR">MUR</mat-option>
+                    <mat-option value="USD">USD</mat-option>
+                </mat-select>
+                <mat-error *ngIf="currency.invalid && (currency.dirty || currency.touched)" class="alert alert-danger">
+                    <div *ngIf="currency.errors.required">
+                        Please select amount currency.
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formfield">
+            <mat-form-field class="example-full-width form-control">
+                <input matInput placeholder="Beneficiary Bank" formControlName="baneBank" name="baneBank">
+                <mat-error *ngIf="baneBank.invalid && (baneBank.dirty || baneBank.touched)" class="alert alert-danger">
+                    <div *ngIf="baneBank.errors.required">
+                        Beneficiary bank is required.
+                    </div>
+                    <div *ngIf="baneBank.errors.pattern">
+                        Only alphabets allowed.
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formfield">
+            <mat-form-field class="example-full-width form-control">
+                <input matInput placeholder="Beneficiary Account Number" formControlName="beneAccNo" name="beneAccNo">
+                <mat-error *ngIf="beneAccNo.invalid && (beneAccNo.dirty || beneAccNo.touched)" class="alert alert-danger">
+                    <div *ngIf="beneAccNo.errors.required">
+                        Beneficiary account no is required.
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formfield">
+            <mat-form-field class="example-full-width form-control">
+                <input matInput placeholder="Payment Details" formControlName="paymentDetails" name="paymentDetails">
+                <mat-error *ngIf="paymentDetails.invalid && (paymentDetails.dirty || paymentDetails.touched)" class="alert alert-danger">
+                    <div *ngIf="paymentDetails.errors.required">
+                        Payment details is required.
+                    </div>
+                    <div *ngIf="baneBank.errors.pattern">
+                        Only alphabets allowed.
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="act-wrap">
+            <button class="bs-btn" id="submit-btn" type="submit" [disabled]="!newTransactionForm.valid">Submit</button>
+            <button class="bs-btn" id="back-btn" type="button" routerLink="/banktransfer">Back</button>
+        </div>
+    </form>
+</div>
