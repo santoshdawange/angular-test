@@ -14,7 +14,7 @@ export class LoginPage {
     }
 
     getErrorText() {
-        return element(by.className('gen_error'));
+        return element(by.className('toast-message'));
     }
 
     getForm(){

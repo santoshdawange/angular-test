@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewTransactionComponent } from './view-transaction.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ViewTransactionComponent', () => {
   let component: ViewTransactionComponent;
@@ -8,6 +9,9 @@ describe('ViewTransactionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        HttpClientTestingModule
+      ],
       declarations: [ ViewTransactionComponent ]
     })
     .compileComponents();

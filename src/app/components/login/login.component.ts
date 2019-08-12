@@ -43,14 +43,15 @@ export class LoginComponent implements OnInit {
   get password() { return this.loginForm.get('password'); }
 
   onLoginSubmit() {
-    this.genError = '';
+    // this.genError = '';
     console.log(this.loginForm.value)
     this.apiservice.login(this.loginForm.value, (response) => {
       if(response.status == 'success'){
         this.toastr.success('Login Successful');
         this.router.navigateByUrl('banktransfer')
       }else{
-        this.genError = response.message;
+        this.toastr.error(response.message);
+        // this.genError = response.message;
       }
     })
   }

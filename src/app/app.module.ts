@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 // import 'core-js/es7/reflect';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
@@ -50,6 +50,7 @@ import { LogoutDialog } from './shared/component/header/dialog/logout-dialog';
     MatProgressSpinnerModule,
     MatDialogModule,
     ReactiveFormsModule,
+    Validators,
     HttpClientModule,
     HttpModule,
     ToastrModule.forRoot({
