@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
+// import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -53,7 +53,7 @@ import { OnlyDigitsDirective } from './shared/directives/only-digits.directive';
     MatDialogModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HttpModule,
+    // HttpModule,
     ToastrModule.forRoot({
       timeOut: 1500,
       positionClass: 'toast-top-left',
