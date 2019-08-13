@@ -16,7 +16,7 @@
         bottom: 0;
         left: 0;
         right: 100%;
-        background: #000;
+        background: rgb(2, 87, 13);
         transition: all 0.5s ease;
         z-index: -1;
     }
@@ -30,6 +30,15 @@
         //   z-index: -2;
         //   right: 100%;
         // }
+    }
+
+    &:disabled{
+        &:hover{
+            color: rgba(0, 0, 0, 0.8);
+            &:before{
+                right: inherit;
+            }
+        }
     }
     &.typ-big {
         padding: 25px 50px;

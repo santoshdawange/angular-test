@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'banktransfer', component: BankTransferComponent, canActivate: [AuthGuard] },
   { path: 'viewtransaction', component: ViewTransactionComponent, canActivate: [AuthGuard] },
-  { path: 'newtransaction', component: NewTransactionComponent, canActivate: [AuthGuard] }
+  { path: 'newtransaction', component: NewTransactionComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '/banktransfer', pathMatch: 'full' }
 ];
 
 

@@ -3,25 +3,28 @@
     position: relative;
     height: 100vh;
     .btn-wrap {
-        width: 80%;
+        width: 40%;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         overflow: hidden;
         .left-wrap,
         .right-wrap {
-            padding: 25px 0px;
+            padding: 20px 0px; 
+        }
+
+        .bs-btn{
+           box-shadow: 0 0px 17px #ddd
         }
         .left-wrap {
             float: left;
-            width: 50%;
+            width: 100%;
             text-align: center;
-            border-right: 1px solid #000;
         }
         .right-wrap {
             float: right;
-            width: 50%;
+            width: 100%;
             text-align: center;
         }
     }

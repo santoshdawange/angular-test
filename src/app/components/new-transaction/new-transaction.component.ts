@@ -38,8 +38,7 @@ export class NewTransactionComponent implements OnInit {
           Validators.required
         ]),
         'custPhone': new FormControl('', [
-          Validators.required,
-          Validators.pattern(/[0-9]/i)
+          Validators.required
         ]),
       }),
       'transferAmt': new FormControl('', [
@@ -102,6 +101,11 @@ export class NewTransactionComponent implements OnInit {
         }else{
           this.globalservice.loader = false;
           this.toastr.error(response.message);
+          this.customer_info.patchValue({
+            custName: '',
+            custAdd: '',
+            custPhone: ''
+          })
         }
       })
     }

@@ -1,4 +1,3 @@
-
 /*asif*/
 /*asif end*/
 /* breakpoints */
@@ -831,7 +830,7 @@ html input:disabled {
   bottom: 0;
   left: 0;
   right: 100%;
-  background: #000;
+  background: #02570d;
   transition: all 0.5s ease;
   z-index: -1;
 }
@@ -840,6 +839,12 @@ html input:disabled {
 }
 .bs-btn:hover:before {
   right: 0%;
+}
+.bs-btn:disabled:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.bs-btn:disabled:hover:before {
+  right: inherit;
 }
 .bs-btn.typ-big {
   padding: 25px 50px;
@@ -1048,26 +1053,28 @@ html input:disabled {
   height: 100vh;
 }
 .lyt-content .btn-wrap {
-  width: 80%;
+  width: 40%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
 .lyt-content .btn-wrap .left-wrap,
 .lyt-content .btn-wrap .right-wrap {
-  padding: 25px 0px;
+  padding: 20px 0px;
+}
+.lyt-content .btn-wrap .bs-btn {
+  box-shadow: 0 0px 17px #ddd;
 }
 .lyt-content .btn-wrap .left-wrap {
   float: left;
-  width: 50%;
+  width: 100%;
   text-align: center;
-  border-right: 1px solid #000;
 }
 .lyt-content .btn-wrap .right-wrap {
   float: right;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 

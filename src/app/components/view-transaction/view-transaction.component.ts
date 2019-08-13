@@ -9,7 +9,7 @@ import { GlobalService } from 'src/app/shared/services/global.service';
 })
 
 export class ViewTransactionComponent implements OnInit {
-  public transactionData: any[];
+  public transactionData: any[] = [];
   constructor(
     public apiservice: ApiService,
     public globalservice: GlobalService
@@ -24,7 +24,5 @@ export class ViewTransactionComponent implements OnInit {
         this.globalservice.loader = false;
       }
     })
-
-    console.log(this.globalservice.getTransactionData());
   }
 }

@@ -5,13 +5,13 @@
     <form action="" [formGroup]="newTransactionForm" class="newTransactionForm" (ngSubmit)="onSubmit()" #formRef="ngForm">
         <div class="formfield">
             <mat-form-field class="example-full-width form-control">
-                <input matInput placeholder="Reference Number" formControlName="refNumber" name="refNumber" readonly disabled maxlength="15">
+                <input matInput placeholder="Reference Number" formControlName="refNumber" name="refNumber" readonly maxlength="15" autocomplete="off">
             </mat-form-field>
         </div>
         <div formGroupName="customer_info">
             <div class="formfield">
                 <mat-form-field class="example-full-width form-control">
-                    <input matInput placeholder="Customer Number" formControlName="customerNo" name="customerNo" maxlength="5" (keyup)="getCustInfo($event)">
+                    <input matInput placeholder="Customer Number" formControlName="customerNo" appOnlyDigits name="customerNo" maxlength="5" (input)="getCustInfo($event)" autocomplete="off">
                     <mat-error *ngIf="customerNo.invalid && (customerNo.dirty || customerNo.touched)" class="alert alert-danger">
                         <div *ngIf="customerNo.errors.required">
                             Customer No is required.
@@ -27,7 +27,7 @@
             </div>
             <div class="formfield">
                 <mat-form-field class="example-full-width form-control">
-                    <input matInput placeholder="Customer Name" formControlName="custName" name="custName">
+                    <input matInput placeholder="Customer Name" formControlName="custName" name="custName" readonly disabled autocomplete="off">
                     <mat-error *ngIf="custName.invalid && (custName.dirty || custName.touched)" class="alert alert-danger">
                         <div *ngIf="custName.errors.required">
                             Customer Name is required.
@@ -37,7 +37,7 @@
             </div>
             <div class="formfield">
                 <mat-form-field class="example-full-width form-control">
-                    <textarea matInput placeholder="Address" formControlName="custAdd" name="custAdd"></textarea>
+                    <textarea matInput placeholder="Address" formControlName="custAdd" name="custAdd" readonly disabled autocomplete="off"></textarea>
                     <mat-error *ngIf="custAdd.invalid && (custAdd.dirty || custAdd.touched)" class="alert alert-danger">
                         <div *ngIf="custAdd.errors.required">
                             Customer address is required.
@@ -47,7 +47,7 @@
             </div>
             <div class="formfield">
                 <mat-form-field class="example-full-width form-control">
-                    <input matInput placeholder="Phone Number" formControlName="custPhone" name="custPhone">
+                    <input matInput placeholder="Phone Number" formControlName="custPhone" name="custPhone" readonly disabled autocomplete="off">
                     <mat-error *ngIf="custPhone.invalid && (custPhone.dirty || custPhone.touched)" class="alert alert-danger">
                         <div *ngIf="custPhone.errors.required">
                             Customer phone is required.
@@ -61,7 +61,7 @@
         </div>
         <div class="formfield">
             <mat-form-field class="example-full-width form-control">
-                <input matInput placeholder="Transfer Amount" formControlName="transferAmt" name="transferAmt">
+                <input matInput placeholder="Transfer Amount" formControlName="transferAmt" appOnlyDigits maxlength="15" autocomplete="off" name="transferAmt" autocomplete="off">
                 <mat-error *ngIf="transferAmt.invalid && (transferAmt.dirty || transferAmt.touched)" class="alert alert-danger">
                     <div *ngIf="transferAmt.errors.required">
                         Transfer amount is required.
@@ -74,7 +74,7 @@
         </div>
         <div class="formfield">
             <mat-form-field class="example-full-width form-control">
-                <mat-select placeholder="Transfer Currency" formControlName="currency" name="currency">
+                <mat-select placeholder="Transfer Currency" formControlName="currency" name="currency" autocomplete="off">
                     <mat-option value="AED">AED</mat-option>
                     <mat-option value="EUR">EUR</mat-option>
                     <mat-option value="CHF">CHF</mat-option>
@@ -90,7 +90,7 @@
         </div>
         <div class="formfield">
             <mat-form-field class="example-full-width form-control">
-                <input matInput placeholder="Beneficiary Bank" formControlName="baneBank" name="baneBank">
+                <input matInput placeholder="Beneficiary Bank" appOnlyCharacters formControlName="baneBank" name="baneBank" autocomplete="off">
                 <mat-error *ngIf="baneBank.invalid && (baneBank.dirty || baneBank.touched)" class="alert alert-danger">
                     <div *ngIf="baneBank.errors.required">
                         Beneficiary bank is required.
@@ -103,7 +103,7 @@
         </div>
         <div class="formfield">
             <mat-form-field class="example-full-width form-control">
-                <input matInput placeholder="Beneficiary Account Number" appOnlyDigits formControlName="beneAccNo" name="beneAccNo" maxlength="12">
+                <input matInput placeholder="Beneficiary Account Number" appOnlyDigits formControlName="beneAccNo" name="beneAccNo" maxlength="12" autocomplete="off">
                 <mat-error *ngIf="beneAccNo.invalid && (beneAccNo.dirty || beneAccNo.touched)" class="alert alert-danger">
                     <div *ngIf="beneAccNo.errors.required">
                         Beneficiary account no is required.
@@ -113,12 +113,12 @@
         </div>
         <div class="formfield">
             <mat-form-field class="example-full-width form-control">
-                <input matInput placeholder="Payment Details" formControlName="paymentDetails" name="paymentDetails">
+                <input matInput placeholder="Payment Details" appOnlyCharacters formControlName="paymentDetails" name="paymentDetails" autocomplete="off">
                 <mat-error *ngIf="paymentDetails.invalid && (paymentDetails.dirty || paymentDetails.touched)" class="alert alert-danger">
                     <div *ngIf="paymentDetails.errors.required">
                         Payment details is required.
                     </div>
-                    <div *ngIf="baneBank.errors.pattern">
+                    <div *ngIf="paymentDetails.errors.pattern">
                         Only alphabets allowed.
                     </div>
                 </mat-error>

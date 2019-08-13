@@ -24,9 +24,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 2.	I have used API for login, Credentials are : { "email": "admin@admin.com", "password": "admin" }
 It will login only when you entered the above mention email on screen, so that it will return the users list.
 3.	I have also used Auth Guard to protect the routes.
-4.	Used Directive “FormGroupDirective” to handle FormControl and "appOnlyDigit" Directive to restrict alphabets in input fields used in Beneficiary account number.
-5.	Implemented currency Pipe in Project.
-6.	Created Generic Model file for store data of new transaction.
+4.	Used Directive “FormGroupDirective” to handle FormControl, "appOnlyDigit" Directive to restrict alphabets and special characters in input fields and "appOnlyCharacters" Directive to restrict Numbers and special characters in input fields.
+5.	Implemented custom currencyFormatter Pipe in Project to show transfer amount in view transaction component.
+6.	Created Generic Model file at the time of store data of new transaction.
 7.	For Designing, I have used Angular Material.
 8.	Also for Login, View all transactions, Get customer details by customer no ans Submit transaction. I have used online REST API Provider “Sandbox”.
 9.	As per the assignment, I have validate “phone no” and “transfer amount” to check if they have numbers only required in new transaction form.

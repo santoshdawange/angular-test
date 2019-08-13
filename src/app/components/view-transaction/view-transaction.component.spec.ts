@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewTransactionComponent } from './view-transaction.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CurrencyFormatterPipe } from 'src/app/shared/pipes/currency-formatter.pipe';
 
 describe('ViewTransactionComponent', () => {
   let component: ViewTransactionComponent;
@@ -12,7 +13,7 @@ describe('ViewTransactionComponent', () => {
       imports: [
         HttpClientTestingModule
       ],
-      declarations: [ ViewTransactionComponent ]
+      declarations: [ ViewTransactionComponent, CurrencyFormatterPipe ]
     })
     .compileComponents();
   }));

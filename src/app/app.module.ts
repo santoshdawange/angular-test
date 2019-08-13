@@ -24,6 +24,8 @@ import { NewTransactionComponent } from './components/new-transaction/new-transa
 import { HeaderComponent } from './shared/component/header/header.component';
 import { LogoutDialog } from './shared/component/header/dialog/logout-dialog';
 import { OnlyDigitsDirective } from './shared/directives/only-digits.directive';
+import { OnlyCharactersDirective } from './shared/directives/only-characters.directive';
+import { CurrencyFormatterPipe } from './shared/pipes/currency-formatter.pipe';
 //import { MatTableModule } from '@angular/material/table';
 
 
@@ -36,7 +38,9 @@ import { OnlyDigitsDirective } from './shared/directives/only-digits.directive';
     NewTransactionComponent,
     HeaderComponent,
     LogoutDialog,
-    OnlyDigitsDirective
+    OnlyDigitsDirective,
+    OnlyCharactersDirective,
+    CurrencyFormatterPipe
   ],
   entryComponents: [
     LogoutDialog
@@ -56,7 +60,7 @@ import { OnlyDigitsDirective } from './shared/directives/only-digits.directive';
     // HttpModule,
     ToastrModule.forRoot({
       timeOut: 1500,
-      positionClass: 'toast-top-left',
+      positionClass: 'toast-bottom-right',
       preventDuplicates: false,
     })
   ],
