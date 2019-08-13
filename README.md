@@ -37,6 +37,9 @@ If you entered anyone of the above customer number then only, it will show you i
 13. In new transaction form Reference No, Customer Name, Customer Address and Customer Phone no are readonly fiels as theose fields are auto populated.
 14. For customer no field, transfer amount and beneficiary account no input field restrict input to numbers only.
 15. For Beneficiary bank and payme nt details input field restrict input to alphabets only.
+16. Transfer amount field set a maxlength of 5 digits.
+17. Customer number field set a minlength and maxlength to 5 digits.
+18. Beneficiary account no field set a maxlength to 12 digits.
 
 •	Source For Online REST API's :
 
