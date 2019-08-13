@@ -5,17 +5,16 @@
     .btn-wrap {
         width: 40%;
         position: absolute;
+        padding: 40px 0;
         top: 40%;
         left: 50%;
+        border: 1px solid #f1f1f1;
+        background: #fff;
         transform: translate(-50%, -50%);
         overflow: hidden;
         .left-wrap,
         .right-wrap {
             padding: 20px 0px; 
-        }
-
-        .bs-btn{
-           box-shadow: 0 0px 17px #ddd
         }
         .left-wrap {
             float: left;

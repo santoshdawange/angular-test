@@ -284,6 +284,7 @@ body {
   line-height: initial;
   font-family: "Montserrat", sans-serif !important;
   color: #282828;
+  background: #f9f9f9;
   font-size: 1.4rem;
 }
 
@@ -1025,14 +1026,15 @@ html input:disabled {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #ffffff;
 }
 .lyt-login .form-container {
   position: absolute;
   top: 45%;
   left: 50%;
+  border: 1px solid #f1f1f1;
   max-width: 500px;
   width: 100%;
+  background-color: #fff;
   transform: translate(-50%, -50%);
 }
 .lyt-login .form-container .page-title h2 {
@@ -1055,17 +1057,17 @@ html input:disabled {
 .lyt-content .btn-wrap {
   width: 40%;
   position: absolute;
+  padding: 40px 0;
   top: 40%;
   left: 50%;
+  border: 1px solid #f1f1f1;
+  background: #fff;
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
 .lyt-content .btn-wrap .left-wrap,
 .lyt-content .btn-wrap .right-wrap {
   padding: 20px 0px;
-}
-.lyt-content .btn-wrap .bs-btn {
-  box-shadow: 0 0px 17px #ddd;
 }
 .lyt-content .btn-wrap .left-wrap {
   float: left;

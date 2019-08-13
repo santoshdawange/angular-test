@@ -34,6 +34,9 @@ It will login only when you entered the above mention email on screen, so that i
 11.	I have applied maxlength of 5 to customer number filed in new transaction form.
 12.	Also For customer number field in New Transaction Form , you can enter customer number as : i) 23423 ii) 23432 iii) 23427
 If you entered anyone of the above customer number then only, it will show you its respective fields
+13. In new transaction form Reference No, Customer Name, Customer Address and Customer Phone no are readonly fiels as theose fields are auto populated.
+14. For customer no field, transfer amount and beneficiary account no input field restrict input to numbers only.
+15. For Beneficiary bank and payme nt details input field restrict input to alphabets only.
 
 •	Source For Online REST API's :
 
