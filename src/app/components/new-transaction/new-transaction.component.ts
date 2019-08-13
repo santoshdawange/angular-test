@@ -80,14 +80,14 @@ export class NewTransactionComponent implements OnInit {
     let DateObj = new Date();
     let tempDate = DateObj.getFullYear()+''+('0' + (DateObj.getMonth() + 1)).slice(-2)+''+('0' + DateObj.getDate()).slice(-2);
     let tempRefNo = 'CUS'+tempDate+(this.globalservice.sequenceNo);
-    console.log(tempRefNo);
+    // console.log(tempRefNo);
     this.newTransactionForm.patchValue({
       refNumber: tempRefNo
     })
   }
 
   getCustInfo(event){
-    console.log(event);
+    // console.log(event);
     if((event.target.value).length == 5 && this.customerNo.valid){
       this.globalservice.loader = true;
       this.apiservice.getCustomerData(event.target.value, (response) => {
@@ -112,7 +112,7 @@ export class NewTransactionComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.newTransactionForm.value);
+    // console.log(this.newTransactionForm.value);
     this.globalservice.addTransactionData(this.newTransactionForm.value, (res) => {
       if(res.status == 'success'){
         this.apiservice.submitNewTransaction(this.newTransactionForm.value, (response) => {

@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
 
   onLoginSubmit() {
     // this.genError = '';
-    console.log(this.loginForm.value)
+    // console.log(this.loginForm.value)
     this.apiservice.login(this.loginForm.value, (response) => {
       if(response.status == 'success'){
         this.toastr.success('Login Successful');
