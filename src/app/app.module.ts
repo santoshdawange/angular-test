@@ -23,6 +23,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NewTransactionComponent } from './components/new-transaction/new-transaction.component';
 import { HeaderComponent } from './shared/component/header/header.component';
 import { LogoutDialog } from './shared/component/header/dialog/logout-dialog';
+import { OnlyDigitsDirective } from './shared/directives/only-digits.directive';
 //import { MatTableModule } from '@angular/material/table';
 
 
@@ -34,7 +35,8 @@ import { LogoutDialog } from './shared/component/header/dialog/logout-dialog';
     ViewTransactionComponent,
     NewTransactionComponent,
     HeaderComponent,
-    LogoutDialog
+    LogoutDialog,
+    OnlyDigitsDirective
   ],
   entryComponents: [
     LogoutDialog
@@ -55,7 +57,7 @@ import { LogoutDialog } from './shared/component/header/dialog/logout-dialog';
     ToastrModule.forRoot({
       timeOut: 1500,
       positionClass: 'toast-top-left',
-      preventDuplicates: true,
+      preventDuplicates: false,
     })
   ],
   providers: [],

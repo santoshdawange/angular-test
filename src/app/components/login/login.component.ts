@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
       if(response.status == 'success'){
         this.toastr.success('Login Successful');
         this.router.navigateByUrl('banktransfer')
-      }else{
+      }else if(response.status == 'error'){
         this.toastr.error(response.message);
         // this.genError = response.message;
       }

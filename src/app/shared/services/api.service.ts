@@ -15,14 +15,22 @@ export class ApiService {
     this.httpClient.get('https://ngdemoapi1.getsandbox.com/login')
 		.subscribe(
 			res => {
+        let temp: any;
+        let foundFlag: boolean = false;
         _.forEach(res ,(element) => {
           if(element['email'] == param['email'] && element['password'] == param['password']){
             element['isLoggedIn'] = true;
             sessionStorage.setItem('loginDetails', JSON.stringify(element));
-            callback({'status': 'success', 'data': element, 'message': 'login successfull'});
+            temp = element;
+            foundFlag = true;
           }
         });
-        callback({'status': 'error', 'message': 'email password not matched.'});
+
+        if(foundFlag){
+          callback({'status': 'success', 'data': temp, 'message': 'login successfull'});
+        }else{
+          callback({'status': 'error', 'message': 'email password not matched.'});
+        }
 			},
 			(err: HttpErrorResponse) => {
         callback({'status': 'error', 'message': 'Something went wrong. Please try again.'});

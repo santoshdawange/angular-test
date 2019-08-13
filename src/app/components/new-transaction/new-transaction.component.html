@@ -103,7 +103,7 @@
         </div>
         <div class="formfield">
             <mat-form-field class="example-full-width form-control">
-                <input matInput placeholder="Beneficiary Account Number" formControlName="beneAccNo" name="beneAccNo">
+                <input matInput placeholder="Beneficiary Account Number" appOnlyDigits formControlName="beneAccNo" name="beneAccNo" maxlength="12">
                 <mat-error *ngIf="beneAccNo.invalid && (beneAccNo.dirty || beneAccNo.touched)" class="alert alert-danger">
                     <div *ngIf="beneAccNo.errors.required">
                         Beneficiary account no is required.
