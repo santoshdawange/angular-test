@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions, Headers } from '@angular/http';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import * as _ from 'lodash';
 
@@ -9,8 +8,7 @@ import * as _ from 'lodash';
 export class ApiService {
 
   constructor(
-    private httpClient: HttpClient,
-    private https: Http,
+    private httpClient: HttpClient
   ) { }
 
   login(param, callback){
