@@ -14,7 +14,7 @@ export class ApiService {
   ) { }
 
   login(param, callback){
-    this.httpClient.get('https://ngdemoapi.getsandbox.com/login')
+    this.httpClient.get('https://ngdemoapi1.getsandbox.com/login')
 		.subscribe(
 			res => {
         _.forEach(res ,(element) => {
@@ -33,7 +33,7 @@ export class ApiService {
   }
 
   getTransactionData(callback){
-    this.httpClient.get('https://ngdemoapi.getsandbox.com/getSubmitedTransactions')
+    this.httpClient.get('https://ngdemoapi1.getsandbox.com/getSubmitedTransactions')
 		.subscribe(
 			res => {
         callback({'status': 'success', 'data': res});
@@ -45,7 +45,7 @@ export class ApiService {
   }
 
   getCustomerData(id, callback){
-    this.httpClient.get('https://ngdemoapi.getsandbox.com/customerById/'+id)
+    this.httpClient.get('https://ngdemoapi1.getsandbox.com/customerById/'+id)
 		.subscribe(
 			res => {
         if(res['status'] == 'error' && res['status'] != undefined){
@@ -62,7 +62,7 @@ export class ApiService {
   }
 
   submitNewTransaction(param, callback){
-    this.httpClient.post('https://ngdemoapi.getsandbox.com/saveTransaction', param)
+    this.httpClient.post('https://ngdemoapi1.getsandbox.com/saveTransaction', param)
 		.subscribe(
 			res => {
         callback({res, 'message': 'Transaction submitted successfully.'});
