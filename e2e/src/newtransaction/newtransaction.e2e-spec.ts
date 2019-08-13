@@ -39,7 +39,7 @@ describe('New transaction page tests', () => {
                 });
             });
         });
-    }, 10000);
+    });
 
     it('transaction form should be valid and submit button enabled', () => {
         loginpage.getEmailTextbox().sendKeys('admin@admin.com');
@@ -71,7 +71,7 @@ describe('New transaction page tests', () => {
                 expect(page.getSubmitButton().isEnabled()).toBeTruthy();
             });
         });
-    }, 10000);
+    });
 
     it("should have submit button be disabled initially", () => {
         loginpage.getEmailTextbox().sendKeys('admin@admin.com');
@@ -91,7 +91,7 @@ describe('New transaction page tests', () => {
                 expect(page.getSubmitButton().isEnabled()).toBeFalsy();
             });
         });
-    }, 10000);
+    });
 
     it('if transaction form input fields are blank, transaction form should be invalid', () => {
         loginpage.getEmailTextbox().sendKeys('admin@admin.com');
@@ -123,7 +123,7 @@ describe('New transaction page tests', () => {
                 expect(page.getSubmitButton().isEnabled()).toBeFalsy();
             });
         });
-    }, 10000);
+    });
 
     it('transaction form should be valid and submit button enabled and on click should post data and show succesful message', () => {
         loginpage.getEmailTextbox().sendKeys('admin@admin.com');
@@ -160,6 +160,6 @@ describe('New transaction page tests', () => {
                 });
             });
         });
-    }, 10000);
+    });
 
 });

@@ -31,7 +31,7 @@ describe('Bank Transfer page tests', () => {
             });
 
         });
-    }, 10000);
+    });
 
     it('on click should redirect to view transaction', () => {
         loginpage.getEmailTextbox().sendKeys('admin@admin.com');
@@ -50,5 +50,5 @@ describe('Bank Transfer page tests', () => {
             });
 
         });
-    }, 10000);
+    });
 });

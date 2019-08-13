@@ -13,12 +13,15 @@ export class ViewTransactionComponent implements OnInit {
   constructor(
     public apiservice: ApiService,
     public globalservice: GlobalService
-  ) { }
+  ) { 
+    this.globalservice.loader = true;  
+  }
 
   ngOnInit() {
     this.apiservice.getTransactionData((response) => {
       if(response.status == 'success'){
         this.transactionData = response.data;
+        this.globalservice.loader = false;
       }
     })
 

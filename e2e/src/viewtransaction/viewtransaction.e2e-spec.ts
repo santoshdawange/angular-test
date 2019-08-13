@@ -40,5 +40,5 @@ describe('View Transaction tests', () => {
             });
 
         });
-    }, 10000);
+    });
 });

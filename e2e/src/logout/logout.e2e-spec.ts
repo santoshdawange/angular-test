@@ -34,7 +34,7 @@ describe('Logout tests', () => {
             });
 
         });
-    }, 10000);
+    });
 
     it('on click logout button open dialog and click on cancel should not logged out', () => {
         loginpage.getEmailTextbox().sendKeys('admin@admin.com');
@@ -56,5 +56,5 @@ describe('Logout tests', () => {
             });
 
         });
-    }, 10000);
+    });
 });

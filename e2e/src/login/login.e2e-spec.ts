@@ -54,5 +54,5 @@ describe('Login tests', () => {
             browser.waitForAngular();
             expect(browser.driver.getCurrentUrl()).toMatch('/banktransfer');
         });
-    }, 1000);
+    });
 });
